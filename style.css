@@ -1,0 +1,509 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000000;
+  position: relative;
+  color: white;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body > h1 {
+  text-align: center;
+  position: absolute;
+  top: 7rem;
+  font-family: "Secular One", sans-serif;
+  font-size: 4rem;
+}
+
+/*! Home Page Part ---------------------------------------------- */
+
+#main {
+  position: relative;
+  top: 40vh;
+  height: 55vh;
+  width: 90vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 1.5rem;
+}
+
+.box {
+  border-radius: 60px;
+}
+
+.box-1 {
+  background-color: aquamarine;
+  background-image: url("/images/image_processing20190820-5272-g19db0.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.box-1 > h1 {
+  position: absolute;
+  padding: 1rem;
+  top: 2rem;
+  left: 2rem;
+  font-family: "Kanit", sans-serif;
+}
+
+
+
+.box-2 {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+}
+
+.subbox {
+  border-radius: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  overflow: hidden;
+}
+
+.subbox-2 {
+  background-color: #fed049;
+  color: #000000;
+  position: relative;
+  font-family: "Prompt", sans-serif;
+}
+
+.subbox-2 > h2 {
+  position: absolute;
+  bottom: 1rem;
+  left: 2rem;
+  padding: 1rem;
+}
+
+.subbox-2 > img {
+  position: absolute;
+  bottom: 1rem;
+  right: 2rem;
+  padding: 1rem;
+}
+
+.hover > span {
+  font-size: 1.5rem;
+  font-weight: 700;
+  visibility: hidden;
+  transform: translateX(130%);
+}
+
+.hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hover:hover > h2 {
+  visibility: hidden;
+}
+.hover:hover > img {
+  visibility: hidden;
+}
+
+.hover:hover > span {
+  visibility: visible;
+  animation: slide 4s normal infinite;
+}
+
+.hover > a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-decoration: none;
+  z-index: 10;
+}
+
+.smallbox {
+  background-color: darkgrey;
+  border-radius: 60px;
+  position: relative;
+  font-family: "Prompt", sans-serif;
+  overflow: hidden;
+}
+
+.smallbox-1 {
+  background-color: #f7f5f2;
+  color: #000000;
+}
+
+.smallbox > h2 {
+  position: absolute;
+  bottom: 1rem;
+  left: 2rem;
+  padding: 1rem;
+}
+
+.smallbox > img {
+  position: absolute;
+  bottom: 1rem;
+  right: 2rem;
+  padding: 1rem;
+}
+
+.smallbox-2 {
+  background-color: #181818;
+}
+
+.hover:hover {
+  transform: scale(0.95);
+  transition: transform 0.5s ease-in-out;
+}
+
+@keyframes slide {
+  75%,
+  100% {
+    transform: translateX(2%);
+  }
+}
+
+/*! Intro Section ----------------------------------------------- */
+
+#about {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  top: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about {
+  width: 90%;
+  height: 90%;
+  background-color: #fbc252;
+  border-radius: 50px;
+  display: grid;
+  /*  repeat(auto-fill, minmax(500px, 1fr)); */
+  grid-template-columns: 3fr 2fr;
+  grid-gap: 0.5rem;
+  font-family: "Secular One", sans-serif;
+  color: #000000;
+}
+
+.aboutme {
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.aboutme > h2 {
+  font-size: 3rem;
+}
+
+.aboutme > h2 > span {
+  color: mediumorchid;
+}
+
+.arya {
+  color: #fd841f !important;
+}
+
+.typeanimation > h3 {
+  display: inline;
+  font-size: 2rem;
+}
+
+.typeanimation > h3 > span {
+  color: mediumaquamarine !important;
+}
+
+button {
+  padding: 15px 25px;
+  border: unset;
+  border-radius: 15px;
+  color: #212121;
+  z-index: 1;
+  background: white;
+  position: relative;
+  font-weight: 1000;
+  font-size: 17px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+  overflow: hidden;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color: #212121;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+}
+
+button:hover {
+  color: #e8e8e8;
+}
+
+button:hover::before {
+  width: 100%;
+}
+
+.myimg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.myimg > img {
+  width: 65%;
+  border-radius: 50px;
+}
+
+/*! Skills Section ------------------------------------- */
+
+#skills {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  top: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#skills > h1 {
+  font-family: "Secular One", sans-serif;
+}
+
+.skills {
+  height: 90%;
+  width: 90%;
+  border-radius: 60px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 2rem;
+  padding: 1rem;
+}
+
+.skill {
+  border-radius: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.s1 {
+  background-image: url("/logos/html-5.gif");
+}
+.s2 {
+  background-image: url("/logos/Css3.gif");
+}
+.s3 {
+  background-image: url("/logos/icons8-javascript.gif");
+}
+.s4 {
+  background-image: url("/logos/Express.gif");
+}
+.s5 {
+  background-image: url("/logos/icons8-react.gif");
+}
+.s6 {
+  background-image: url("/logos/icons8-java.gif");
+}
+.s7 {
+  background-image: url("/logos/icons8-python.gif");
+}
+.s8 {
+  background-image: url("/logos/Node\ Js.gif");
+}
+.s9 {
+  background-image: url("/logos/Mongodb.gif");
+}
+.s10 {
+  background-image: url("/logos/Git.gif");
+}
+.s11 {
+  background-image: url("/logos/github.gif");
+}
+.s12 {
+  background-image: url("/logos/Vscode.gif");
+}
+
+/*! Projects ---------------------------------------- */
+
+#projects {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  top: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-family: "Secular One", sans-serif;
+}
+
+.projects {
+  width: 90%;
+  height: 60%;
+  background-color: #181818;
+  border-radius: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+}
+
+.project {
+  height: 50%;
+  border-radius: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.p1 {
+  background-image: url("Projects/Screenshot\ \(4\).png");
+}
+.p2 {
+  background-image: url("Projects/Screenshot\ \(5\).png");
+}
+.p3 {
+  background-image: url("Projects/Screenshot\ \(6\).png");
+}
+
+/* !contact me page!!!!!!!! */
+
+#contact {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  top: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-family: "Secular One", sans-serif;
+}
+
+#contact > h3 {
+  margin-top: 1rem;
+  padding: 1rem;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+}
+
+.contactMe {
+  width: 90%;
+  height: 80%;
+
+  border-radius: 50px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 1rem;
+}
+
+.message > h2 {
+  padding: 1rem;
+  color: dodgerblue;
+}
+
+.social > .links > a {
+  display: flex;
+  margin: 2rem;
+  text-decoration: none;
+  color: white;
+}
+
+/*? Media Queries       */
+
+@media only screen and (max-width: 750px) {
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .aboutme {
+    gap: 0.5rem;
+  }
+  .aboutme > h2 {
+    font-size: 1.5rem;
+  }
+
+  .typeanimation > h3 {
+    font-size: 1.5rem;
+  }
+  .myimg {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .myimg > img {
+    width: 35%;
+  }
+  #main {
+    grid-template-columns: 1fr;
+    height: 80vh;
+  }
+  .figure {
+    display: none;
+  }
+  .contactMe {
+    display: block;
+  }
+  .skills{
+    height: 80vh;
+  }
+  .projects{
+    grid-template-columns: 1fr;
+  }
+  .project{
+    height: 80%;
+  }
+}
+
+@media (min-width: 750px) and (max-width: 1050px) {
+  #main {
+    grid-template-columns: 1fr;
+    height: 80vh;
+  }
+}
+
+@media (max-width:500px){
+  .smallbox>img{
+    visibility: hidden;
+  }
+}
