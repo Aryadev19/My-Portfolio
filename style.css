@@ -273,6 +273,11 @@ button:hover::before {
   width: 100%;
 }
 
+.btnlinks > a{
+  padding: 5px;
+}
+
+
 .myimg {
   display: flex;
   flex-direction: column;
@@ -458,6 +463,7 @@ button:hover::before {
 @media only screen and (max-width: 750px) {
   .about {
     grid-template-columns: 1fr;
+    
   }
 
   .aboutme {
@@ -474,9 +480,7 @@ button:hover::before {
     flex-direction: row;
     justify-content: space-around;
   }
-  .myimg > img {
-    width: 35%;
-  }
+
   #main {
     grid-template-columns: 1fr;
     height: 80vh;
@@ -497,6 +501,12 @@ button:hover::before {
   }
   .project{
     height: 80%;
+  }
+}
+
+@media (max-width:375px){
+  .myimg > img {
+    width: 50%;
   }
 }
 
